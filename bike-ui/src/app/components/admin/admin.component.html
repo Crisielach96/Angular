@@ -1,33 +1,32 @@
+<!-- actualizamos nuestro html -->
 <div class="container">
-
-  <table class = "table table-bordered table-inverse">
+  <!-- tabla basica -->
+  <table class="table table-bordered table-inverse">
+    <!-- Titulos de las columnas -->
     <tr>
-
       <th>Owner Name</th>
       <th>Email</th>
       <th>Model</th>
       <th class="text-right">Purchase Price</th>
-      
     </tr>
-    
-   <tr *ngFor="let bike of bikes">
-     
-    <td>
-      {{bike.Name}}
-    </td>
-     <td>
-        {{bike.Email}}
-     </td>
-     <td>
-        {{bike.Model}}
-     </td>
-     <td class="text-left"> 
-       {{bike.Purchase}}
-     </td>
-
-
-   </tr>
-
+    <!-- for de angular que recorre nuestra lista de bikes -->
+    <tr *ngFor="let bike of bikes">
+      <!-- Utilizamos interpolacion de String -->
+      <td>
+        <!-- 
+        utilizamos interpolacion para traernos todos los 
+        atributos de nuestras bicicletas -->
+        {{bike.name}}
+      </td>
+      <td>
+        {{bike.email}}
+      </td>
+      <td>
+        {{bike.model}}
+      </td>
+      <td class="text-left">
+        {{bike.purchasePrice}}
+      </td>
+    </tr>
   </table>
-  
 </div>
